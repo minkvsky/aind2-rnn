@@ -65,7 +65,7 @@ def build_part2_RNN(window_size, num_chars):
     from keras.layers import Dense, Activation, LSTM
     model = Sequential()
     model.add(LSTM(200, input_shape=(window_size,num_chars)))
-    model.add(Dense(num_chars), activation='linear')
+    model.add(Dense(num_chars, activation='linear'))
     model.add(Activation('softmax'))
     
     return(model)
